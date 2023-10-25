@@ -42,7 +42,7 @@ for file_name in selected_customers:
     figs[fig_name].show()
     figs[fig_name].savefig(f"results/{fig_name}.png")
 
-    test_set_result = evaluate_forecast(test['usage'].iloc[-actual_horizon::], timegpt_fcst_df['TimeGPT'])
+    test_set_result = evaluate_forecast(test['usage'].iloc[:actual_horizon], timegpt_fcst_df['TimeGPT'])
     print(f"[{file_name}]: testing result rmse: {test_set_result['rmse']}, mape: {test_set_result['mape']:.3%}")
     test_set_result.pop('mape_raw')
     test_set_result.pop('rmse_raw')

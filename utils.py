@@ -20,7 +20,7 @@ def create_train_val_test_split(dataframe, train_start=None, train_end=None, tes
     train_end = train_end or int(0.85 * len(dataframe))
     train_start = train_start or 0
     test_end = test_end or -1
-    test_start = test_start or train_end + 1
+    test_start = test_start or train_end
 
     train_df = dataframe.iloc[train_start:train_end]
     test_df = dataframe.iloc[test_start:test_end]
