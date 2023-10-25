@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "timegpt"
+version = "0.1.0"
+description = "explore timegpt from Nixtla"
+authors = ["Yang Cao <yang.cao@energyworx.org>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11.0,<3.13"
+nixtlats = {extras = ["plotting"], version = "^0.1.17"}
+pandas = "^2.1.1"
+scikit-learn = "^1.3.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
